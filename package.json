@@ -1,0 +1,18 @@
+{
+  "author": "Martin Wawrusch <martin@wawrusch.com> (http://martinatsunset.com)",
+  "name": "itunes-epf-feedcheck",
+  "description": "A module that checks the itunes EPF server for new files.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/freshfugu/itunes-epf-feedcheck.git"
+  },
+  "scripts": {
+    "test": "vows"
+  },
+  "engines": {
+    "node": "~v0.4.12"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
