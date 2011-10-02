@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git://github.com/freshfugu/itunes-epf-feedcheck.git"
   },
+  "bin" : {
+    "itunes-epf-feedcheck" : "./bin/itunes-epf-feedcheck"
+  },
   "directories" : {
     "lib" : "lib",
     "test" : "test"
