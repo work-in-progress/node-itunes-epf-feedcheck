@@ -5,6 +5,30 @@ This module connects to the web site (you need to be member of the EPF program) 
 
 ## Usage
 
+	./bin/itunes-epf-feedcheck -u username -p password
+
+returns a json string. Or call it programmatically like so:
+
+### Coffeescript:
+
+	epf = require "itunes-epf-feedcheck"
+	epf.check argv.u, argv.p, (err, data) ->
+		if err
+			console.error err
+		else
+			console.log JSON.stringify(data)
+    
+
+### Javascript:
+
+	var epf = require("itunes-epf-feedcheck");
+	epf.check(argv.u, argv.p, function(err, data) {
+  	if (err) {
+    	return console.error(err);
+  	} else {
+    	return console.log(JSON.stringify(data));
+  	}
+	});
 
 ## Internal Stuff
 
