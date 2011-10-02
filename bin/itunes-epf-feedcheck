@@ -3,5 +3,13 @@
 var argv = require('optimist').argv;
 var epf = require('../lib/index');
 
-epf.checkFeed(argv.u,argv.p, function(err,cb) {});
+epf.checkFeed(argv.u,argv.p, function(err,data) {
+	if(err) {
+		console.log( "ERROR " + err);
+	}	
+	else {
+		console.log(data);
+	}
+
+});
 

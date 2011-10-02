@@ -3,12 +3,8 @@
 #
 
 jsdom = require 'jsdom'
-#fs = require 'fs'
-#path = require 'path'
 _ = require 'underscore'
 constants = require './constants'
-
-#jqueryUrl = "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" 
 
 
 exports.IncrementalFolderCheck = class IncrementalFolderCheck
@@ -33,6 +29,10 @@ exports.IncrementalFolderCheck = class IncrementalFolderCheck
     items = $.find('a')
     items = _.map items, (item) -> $(item).text()
     items = _.select items, (item) -> item.match(@folderRegex)
+    
+    console.log "FOLDER"
+    _.each items, (item) -> console.log item
+    
     _.toArray items
 
 

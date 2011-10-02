@@ -9,7 +9,7 @@ fs = require 'fs'
 path = require 'path'
 _ = require 'underscore'
 
-IncrementalFolderCheck = require './incremental_folder_check'
+IncrementalFolderCheck = require('./incremental_folder_check').IncrementalFolderCheck
 
 jqueryUrl = "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" 
 
@@ -39,6 +39,11 @@ class ItunesEpfFeedcheck
   checkFeed : (username,password,cb) ->    
     jsdom.env @feedUrl(username,password), [ jqueryUrl], (e, window) =>
       return cb(e) if e 
-      cb null, @parseCurrentResult(window) 
+      res = @parseCurrentResult window
+      
+      ifc = new IncrementalFolderCheck(username,password)
+      ifc.check (e,result) =>
+        return cb(e) if e
+        cb null, result 
 
 exports.itunesEpfFeedcheck = new ItunesEpfFeedcheck()
