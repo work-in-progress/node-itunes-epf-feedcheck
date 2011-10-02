@@ -5,6 +5,7 @@
 jsdom = require 'jsdom'
 _ = require 'underscore'
 constants = require './constants'
+util = require './util'
 
 # A regex used to determine the folder, filters out text that looks like 12122012/
 folderRegex = /^\d{8}\/$/i
@@ -28,7 +29,9 @@ module.exports = class IncrementalFolderCheck
     items = _.map items, (item) -> $(item).text()
     items = _.select items, (item) -> item.match(folderRegex)
     
-    #_.each items, (item) -> console.log item
+    items = _.map items, (item) => 
+        folderUrl : "#{@feedUrl()}#{item}"
+        date : util.parseAppleDate item
     
     _.toArray items
 

@@ -5,6 +5,7 @@
 jsdom = require 'jsdom'
 _ = require 'underscore'
 constants = require './constants'
+util = require './util'
 
 # A regex used to determine the file, filters out text that looks like blah12122012.tbz
 fileRegex = /\d{8}\.tbz$/i
@@ -29,11 +30,16 @@ module.exports = class FileCheck
     items = _.select items, (item) -> item.match(fileRegex)
     
     items = _.map items, (item) => 
-        url : "#{@feedUrl()}#{item}"
+        fileUrl : "#{@feedUrl()}#{item}"
         fileName : item
     #_.each items, (item) -> console.log item
     
-    _.toArray items
+    items = _.toArray items
+    filename = _.first(items).fileName
+    
+    res =
+      files : items 
+      date : util.parseAppleDate filename
 
 
   # Checks the feed.
