@@ -3,10 +3,14 @@
   "name": "itunes-epf-feedcheck",
   "description": "A module that checks the itunes EPF server for new files.",
   "version": "0.0.1",
-  "main" : "package.js",
+  "main" : "index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/freshfugu/itunes-epf-feedcheck.git"
+  },
+  "directories" : {
+    "lib" : "lib",
+    "test" : "test"
   },
   "keywords" : [
     "itunes","epf"
@@ -15,7 +19,7 @@
     "test": "vows test/*-test.js"
   },
   "engines": {
-    "node": "~v0.4.12"
+    "node": ">=0.4.10"
   },
   "dependencies": {
     "jsdom" : ">= 0.2.5"
@@ -24,7 +28,6 @@
     "colors" : ">= 0.5.0",
     "should" : ">=0.2.1",    
     "vows" : ">= 0.5.9"
-    
-    
-  }
+  },
+  "license" : "MIT/X11"
 }
