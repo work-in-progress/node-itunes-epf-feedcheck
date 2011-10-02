@@ -17,18 +17,21 @@ module.exports = class FileCheck
   
   # Constructs a feed url to access the incremental page
   feedUrl : ->
-    "http://#{encodeURIComponent(@username)}:#{encodeURIComponent(@password)}@#{constants.appleEpfRoot}/"
+    "http://#{encodeURIComponent(@username)}:#{encodeURIComponent(@password)}@#{constants.appleEpfRoot}"
 
   # Parses the result from the request and extracts the subfolders that resemble a date
   # window: The window, as returned from jsdom
   # returns an array of strings containing the folder matches including a trailing /
-  parseJsDom : (window) ->
+  parseJsDom : (window) =>
     $ = window.$
     items = $.find('a')
     items = _.map items, (item) -> $(item).text()
     items = _.select items, (item) -> item.match(fileRegex)
     
-    _.each items, (item) -> console.log item
+    items = _.map items, (item) => 
+        url : "#{@feedUrl()}#{item}"
+        fileName : item
+    #_.each items, (item) -> console.log item
     
     _.toArray items
 

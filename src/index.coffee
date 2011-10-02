@@ -9,9 +9,15 @@ module.exports.check = (username,password,cb) ->
   cur = new FileCheck(username,password)
   cur.check (e,result) =>
     return cb(e) if e
+    
+    output = 
+      full : result
+    
     ifc = new IncrementalFolderCheck(username,password)
     ifc.check (e,result) =>
       return cb(e) if e
-      cb null, result
+      
+      output.incremental = result
+      cb null, output
 
 

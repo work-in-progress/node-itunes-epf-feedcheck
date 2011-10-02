@@ -17,7 +17,7 @@ module.exports = class IncrementalFolderCheck
   
   # Constructs a feed url to access the incremental page
   feedUrl : ->
-    "http://#{encodeURIComponent(@username)}:#{encodeURIComponent(@password)}@#{constants.appleEpfRoot}/incremental/"
+    "http://#{encodeURIComponent(@username)}:#{encodeURIComponent(@password)}@#{constants.appleEpfRoot}incremental/"
 
   # Parses the result from the request and extracts the subfolders that resemble a date
   # window: The window, as returned from jsdom
@@ -28,7 +28,7 @@ module.exports = class IncrementalFolderCheck
     items = _.map items, (item) -> $(item).text()
     items = _.select items, (item) -> item.match(folderRegex)
     
-    _.each items, (item) -> console.log item
+    #_.each items, (item) -> console.log item
     
     _.toArray items
 
