@@ -23,7 +23,7 @@
     "watch" : "coffee -c -w  -o lib src"
   },
   "engines": {
-    "node": ">=0.4.10"
+    "node": ">=0.4.8"
   },
   "dependencies": {
     "jsdom" : ">= 0.2.5",
