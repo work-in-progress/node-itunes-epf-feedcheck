@@ -8,7 +8,7 @@ This module connects to the web site (you need to be member of the EPF program) 
 
 ## Internal Stuff
 
-coffee -c -w *.coffee test lib
+coffee -c -w  test lib
 npm link
 npm adduser
 npm publish
