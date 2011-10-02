@@ -3,47 +3,21 @@
 # for new files.
 # MIT licensed
 #
+#module.exports = require("./itunes-epf-feedcheck").itunesEpfFeedcheck
 
-jsdom = require 'jsdom'
-fs = require 'fs'
-path = require 'path'
-_ = require 'underscore'
-
-IncrementalFolderCheck = require('./incremental_folder_check')
-
-jqueryUrl = "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" 
-
-appleEpfRoot = "feeds.itunes.apple.com/feeds/epf/v3/full/current/"
-dayRegex = /\d{8}\.tbz$/i
-#DAY_FOLDER_REGEX = /\A\d{8}\/\z/i
-
-  
+IncrementalFolderCheck = require './incremental_folder_check'
+FileCheck = require './file_check'
 
 class ItunesEpfFeedcheck
-  feedUrl : (username,password) ->
-    "http://#{encodeURIComponent(username)}:#{encodeURIComponent(password)}@#{appleEpfRoot}"
-  
-  parseCurrentResult : (window) ->
-    $ = window.$
-    items = $.find('a')
-    items = _.map items, (item) -> $(item).text()
-    items = _.select items, (item) -> item.match(dayRegex)
-    
-    #
-    _.each items, (item) -> console.log item
-    
-    _.toArray items
-      
     
   # Checks the feed.
-  checkFeed : (username,password,cb) ->    
-    jsdom.env @feedUrl(username,password), [ jqueryUrl], (e, window) =>
-      return cb(e) if e 
-      res = @parseCurrentResult window
-      
+  check : (username,password,cb) ->   
+    cur = new FileCheck(username,password)
+    cur.check (e,result) =>
+      return cb(e) if e
       ifc = new IncrementalFolderCheck(username,password)
       ifc.check (e,result) =>
         return cb(e) if e
-        cb null, result 
+        cb null, result
 
 exports.itunesEpfFeedcheck = new ItunesEpfFeedcheck()
