@@ -9,7 +9,7 @@ constants = require './constants'
 # A regex used to determine the folder, filters out text that looks like 12122012/
 folderRegex = /^\d{8}\/$/i
 
-exports.IncrementalFolderCheck = class IncrementalFolderCheck  
+module.exports = class IncrementalFolderCheck  
   # Initializes a new instance of the IncrementalFolderCheck class.
   # username: The EPF username you received from Apple
   # password: The EPF password you received from Apple  

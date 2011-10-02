@@ -8,7 +8,8 @@ This module connects to the web site (you need to be member of the EPF program) 
 
 ## Internal Stuff
 
-coffee -c -w  test lib
+npm run-script watch
+
 npm link
 npm adduser
 npm publish
@@ -35,7 +36,7 @@ Listened to lots of Nicki Minaj while writing this.
 
 == Copyright
 
-Copyright (c) 2011 Martin Wawrusch. See LICENSE.md for
+Copyright (c) 2011 Martin Wawrusch. See LICENSE for
 further details.
 
 

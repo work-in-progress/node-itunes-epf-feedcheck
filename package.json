@@ -13,13 +13,14 @@
   },
   "directories" : {
     "lib" : "./lib",
-    "test" : "./test"
+    "test" : "./spec"
   },
   "keywords" : [
     "itunes","epf"
   ],
   "scripts": {
-    "test": "vows test/*-test.js"
+    "test": "vows --spec spec/*-spec.coffee",
+    "watch" : "coffee -c -w  -o lib src"
   },
   "engines": {
     "node": ">=0.4.10"

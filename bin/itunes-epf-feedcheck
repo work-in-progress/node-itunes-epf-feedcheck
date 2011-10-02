@@ -5,7 +5,7 @@ var epf = require('../lib/index');
 
 epf.checkFeed(argv.u,argv.p, function(err,data) {
 	if(err) {
-		console.log( "ERROR " + err);
+		console.error( err);
 	}	
 	else {
 		console.log(data);
