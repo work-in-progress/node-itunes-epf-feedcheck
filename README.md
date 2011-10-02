@@ -3,6 +3,8 @@
 The Apple iTunes EPF program exports a daily dump of all the iTunes store content, exposed through their web site. The content is structured in folders that expose weekly changes, with one full dump and incremental updates there after.
 This module connects to the web site (you need to be member of the EPF program) and returns the list of files for the current week. It is intended to be called on a regular basis (every hour or so) to determine if new data is available for download.
 
+[![Build Status](https://secure.travis-ci.org/[freshfugu]/[itunes-epf-feedcheck].png)](http://travis-ci.org/[freshfugu]/[itunes-epf-feedcheck])
+
 ## Usage
 
 	./bin/itunes-epf-feedcheck -u username -p password
