@@ -12,8 +12,8 @@
     "itunes-epf-feedcheck" : "./bin/itunes-epf-feedcheck"
   },
   "directories" : {
-    "lib" : "lib",
-    "test" : "test"
+    "lib" : "./lib",
+    "test" : "./test"
   },
   "keywords" : [
     "itunes","epf"
@@ -26,12 +26,19 @@
   },
   "dependencies": {
     "jsdom" : ">= 0.2.5",
-    "optimist" : "*"
+    "optimist" : "*",
+    "underscore" : "*"
   },
   "devDependencies": {
     "colors" : ">= 0.5.0",
     "should" : ">=0.2.1",    
     "vows" : ">= 0.5.9"
   },
-  "license" : "MIT/X11"
+  "bugs": { "url": "http://github.com/freshfugu/itunes-epf-feedcheck/issues" },
+    "licenses": [
+      { "type": "MIT",
+        "url": "http://github.com/assaf/zombie/raw/master/MIT-LICENSE"
+      }
+    ]
+    
 }
