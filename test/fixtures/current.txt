@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /feeds/epf/v3/full/current</title>
+ </head>
+ <body>
+<h1>Index of /feeds/epf/v3/full/current</h1>
+<table><tr><th><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr><tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="incremental/">incremental/</a>           </td><td align="right">01-Oct-2011 10:27  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="itunes20110928.tbz">itunes20110928.tbz</a>     </td><td align="right">29-Sep-2011 10:30  </td><td align="right">3.0G</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="itunes20110928.tbz.md5">itunes20110928.tbz.md5</a> </td><td align="right">29-Sep-2011 10:31  </td><td align="right"> 60 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="match20110928.tbz">match20110928.tbz</a>      </td><td align="right">29-Sep-2011 10:34  </td><td align="right">215M</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="match20110928.tbz.md5">match20110928.tbz.md5</a>  </td><td align="right">29-Sep-2011 10:34  </td><td align="right"> 59 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="popularity20110928.tbz">popularity20110928.tbz</a> </td><td align="right">29-Sep-2011 10:34  </td><td align="right"> 16M</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="popularity20110928.tbz.md5">popularity20110928.t..&gt;</a></td><td align="right">29-Sep-2011 10:34  </td><td align="right"> 64 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="pricing20110928.tbz">pricing20110928.tbz</a>    </td><td align="right">29-Sep-2011 12:42  </td><td align="right">2.2G</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="pricing20110928.tbz.md5">pricing20110928.tbz.md5</a></td><td align="right">29-Sep-2011 12:42  </td><td align="right"> 61 </td><td>&nbsp;</td></tr>
+<tr><th colspan="5"><hr></th></tr>
+</table>
+</body></html>
