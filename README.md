@@ -9,35 +9,30 @@ This module connects to the web site (you need to be member of the EPF program) 
 
 returns a json string. Or call it programmatically like so:
 
-### Coffeescript:
+### Coffeescript
 
 	epf = require "itunes-epf-feedcheck"
-	epf.check argv.u, argv.p, (err, data) ->
+	epf.check "username", "password", (err, data) ->
 		if err
 			console.error err
 		else
 			console.log JSON.stringify(data)
     
-
-### Javascript:
+### Javascript
 
 	var epf = require("itunes-epf-feedcheck");
-	epf.check(argv.u, argv.p, function(err, data) {
-  	if (err) {
-    	return console.error(err);
-  	} else {
-    	return console.log(JSON.stringify(data));
-  	}
+	epf.check("username", "password", function(err, data) {
+		if (err) {
+			return console.error(err);
+		} else {
+			return console.log(JSON.stringify(data));
+		}
 	});
 
-## Internal Stuff
 
-npm run-script watch
+## Advertising :)
 
-npm link
-npm adduser
-npm publish
-
+Check out http://freshfugu.com and http://scottyapp.com
 
 ## Trivia
 
@@ -47,6 +42,13 @@ Listened to lots of Nicki Minaj while writing this.
 
 ### 0.0.1
 * First version
+
+## Internal Stuff
+
+npm run-script watch
+npm link
+npm adduser
+npm publish
 
 ## Contributing to itunes-epf-feedback
  
