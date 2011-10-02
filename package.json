@@ -8,11 +8,19 @@
     "url": "git://github.com/freshfugu/itunes-epf-feedcheck.git"
   },
   "scripts": {
-    "test": "vows"
+    "test": "vows test/*-test.js"
   },
   "engines": {
     "node": "~v0.4.12"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "jsdom" : ">= 0.2.5"
+  },
+  "devDependencies": {
+    "colors" : ">= 0.5.0",
+    "should" : ">=0.2.1",    
+    "vows" : ">= 0.5.9"
+    
+    
+  }
 }
