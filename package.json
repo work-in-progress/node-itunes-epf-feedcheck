@@ -27,12 +27,14 @@
   "dependencies": {
     "jsdom" : ">= 0.2.5",
     "optimist" : "*",
-    "underscore" : "*"
+    "underscore" : "*",
+    "async" : "*"
   },
   "devDependencies": {
     "colors" : ">= 0.5.0",
     "should" : ">=0.2.1",    
-    "vows" : ">= 0.5.9"
+    "vows" : ">= 0.5.9",
+    "nock" : "*"
   },
   "bugs": { "url": "http://github.com/freshfugu/itunes-epf-feedcheck/issues" },
     "licenses": [

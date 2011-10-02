@@ -6,12 +6,10 @@ jsdom = require 'jsdom'
 _ = require 'underscore'
 constants = require './constants'
 
+# A regex used to determine the folder, filters out text that looks like 12122012/
+folderRegex = /^\d{8}\/$/i
 
-exports.IncrementalFolderCheck = class IncrementalFolderCheck
-  
-  # A regex used to determine the folder, filters out text that looks like 12122012/
-  @folderRegex : /^\d{8}\/$/i
-  
+exports.IncrementalFolderCheck = class IncrementalFolderCheck  
   # Initializes a new instance of the IncrementalFolderCheck class.
   # username: The EPF username you received from Apple
   # password: The EPF password you received from Apple  
@@ -28,9 +26,8 @@ exports.IncrementalFolderCheck = class IncrementalFolderCheck
     $ = window.$
     items = $.find('a')
     items = _.map items, (item) -> $(item).text()
-    items = _.select items, (item) -> item.match(@folderRegex)
+    items = _.select items, (item) -> item.match(folderRegex)
     
-    console.log "FOLDER"
     _.each items, (item) -> console.log item
     
     _.toArray items
