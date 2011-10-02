@@ -6,7 +6,11 @@
 
 jsdom = require 'jsdom'
 fs = require 'fs'
-jquery = fs.readFileSync("../external/jquery-1.6.4.min.js").toString()
+path = require 'path'
+
+# some wierd problem with require
+jqueryUrl = path.resolve "./external/jquery-1.6.4.min.js"
+jquery = fs.readFileSync(jqueryUrl).toString()
 
 appleEpfRoot = "feeds.itunes.apple.com/feeds/epf/v3/full/current/"
 #DAY_FOLDER_REGEX = /\A\d{8}\/\z/i
@@ -15,10 +19,8 @@ appleEpfRoot = "feeds.itunes.apple.com/feeds/epf/v3/full/current/"
 exports.itunesEpfFeedcheck = 
   checkFeed : (username,password,cb) ->
     # check that username and password are ok and cb is not null
-    url = "http://#{encodeUriComponent(username)}:#{encodeUriComponent(password)}@#{appleEpfRoot}"
-    jsdom.env url, 
-              [ jquery ], 
-              (e, window) ->
+    url = "http://#{encodeURIComponent(username)}:#{encodeURIComponent(password)}@#{appleEpfRoot}"
+    jsdom.env url, [ jquery ], (e, window) ->
       return cb(e) if e     
       console.log window.$('body').html()
       
