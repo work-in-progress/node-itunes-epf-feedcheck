@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var argv = require('optimist').argv;
-var epf = require('../index');
+var epf = require('../lib/index');
 
 epf.checkFeed(argv.u,argv.p, function(err,cb) {});
 
