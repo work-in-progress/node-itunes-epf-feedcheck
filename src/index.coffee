@@ -29,11 +29,9 @@ module.exports.check = (username,password,cb) ->
           do (inc) =>
             fc = new FileCheck(username,password,inc.folderUrl)
             fc.check (e,result) =>
+              return cb(e) if e
+
               count = count - 1
-              
-              if e 
-                count = 0
-                return cb e
                 
               inc.files = result.files # ignore the date
               if count == 0 

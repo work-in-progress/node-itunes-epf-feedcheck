@@ -3,7 +3,9 @@
 The Apple iTunes EPF program exports a daily dump of all the iTunes store content, exposed through their web site. The content is structured in folders that expose weekly changes, with one full dump and incremental updates there after.
 This module connects to the web site (you need to be member of the EPF program) and returns the list of files for the current week. It is intended to be called on a regular basis (every hour or so) to determine if new data is available for download.
 
-[![Build Status](https://secure.travis-ci.org/[freshfugu]/[itunes-epf-feedcheck].png)](http://travis-ci.org/[freshfugu]/[itunes-epf-feedcheck])
+[![Build Status](https://secure.travis-ci.org/freshfugu/itunes-epf-feedcheck.png)](http://travis-ci.org/freshfugu/itunes-epf-feedcheck)
+
+Please note that travis-ci.org, at this point in time, does not test this correctly because the nock mocking library needs node 0.4.10 but travis runs on 0.4.8
 
 ## Usage
 
@@ -72,10 +74,10 @@ Listened to lots of Nicki Minaj while writing this.
 
 ## Internal Stuff
 
-npm run-script watch
-npm link
-npm adduser
-npm publish
+* npm run-script watch
+* npm link
+* npm adduser
+* npm publish
 
 ## Contributing to itunes-epf-feedback
  
