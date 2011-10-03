@@ -1,3 +1,4 @@
+#async = require 'async'
 IncrementalFolderCheck = require './incremental_folder_check'
 FileCheck = require './file_check'
 
@@ -18,6 +19,26 @@ module.exports.check = (username,password,cb) ->
       return cb(e) if e
       
       output.incremental = result
-      cb null, output
+      
+      if output.incremental.length == 0
+        cb null, output      
+      else
+        count = output.incremental.length
+        
+        for inc in output.incremental
+          do (inc) =>
+            fc = new FileCheck(username,password,inc.folderUrl)
+            fc.check (e,result) =>
+              count = count - 1
+              
+              if e 
+                count = 0
+                return cb e
+                
+              inc.files = result.files # ignore the date
+              if count == 0 
+                cb null, output
+
+        
 
 

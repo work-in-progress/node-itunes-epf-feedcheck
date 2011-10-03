@@ -14,10 +14,12 @@ module.exports = class FileCheck
   # Initializes a new instance of the IncrementalFolderCheck class.
   # username: The EPF username you received from Apple
   # password: The EPF password you received from Apple  
-  constructor: (@username,@password) ->
+  constructor: (@username,@password,@overrideFeedUrl) ->
   
   # Constructs a feed url to access the incremental page
   feedUrl : ->
+    return @overrideFeedUrl if @overrideFeedUrl
+    
     "http://#{encodeURIComponent(@username)}:#{encodeURIComponent(@password)}@#{constants.appleEpfRoot}"
 
   # Parses the result from the request and extracts the subfolders that resemble a date

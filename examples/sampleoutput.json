@@ -1,0 +1,101 @@
+{
+    "full": {
+        "files": [{
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/itunes20110928.tbz",
+            "fileName": "itunes20110928.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/match20110928.tbz",
+            "fileName": "match20110928.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/popularity20110928.tbz",
+            "fileName": "popularity20110928.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/pricing20110928.tbz",
+            "fileName": "pricing20110928.tbz"
+        }],
+        "date": {
+            "asString": "20110928",
+            "month": 9,
+            "day": 28,
+            "year": 2011
+        }
+    },
+    "incremental": [{
+        "folderUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20110930/",
+        "date": {
+            "asString": "20110930",
+            "month": 9,
+            "day": 30,
+            "year": 2011
+        },
+        "files": [{
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20110930/itunes20110930.tbz",
+            "fileName": "itunes20110930.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20110930/match20110930.tbz",
+            "fileName": "match20110930.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20110930/popularity20110930.tbz",
+            "fileName": "popularity20110930.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20110930/pricing20110930.tbz",
+            "fileName": "pricing20110930.tbz"
+        }]
+    },
+    {
+        "folderUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20111001/",
+        "date": {
+            "asString": "20111001",
+            "month": 10,
+            "day": 1,
+            "year": 2011
+        },
+        "files": [{
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20111001/itunes20111001.tbz",
+            "fileName": "itunes20111001.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20111001/match20111001.tbz",
+            "fileName": "match20111001.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20111001/popularity20111001.tbz",
+            "fileName": "popularity20111001.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20111001/pricing20111001.tbz",
+            "fileName": "pricing20111001.tbz"
+        }]
+    },
+    {
+        "folderUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20111002/",
+        "date": {
+            "asString": "20111002",
+            "month": 10,
+            "day": 2,
+            "year": 2011
+        },
+        "files": [{
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20111002/itunes20111002.tbz",
+            "fileName": "itunes20111002.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20111002/match20111002.tbz",
+            "fileName": "match20111002.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20111002/popularity20111002.tbz",
+            "fileName": "popularity20111002.tbz"
+        },
+        {
+            "fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/incremental/20111002/pricing20111002.tbz",
+            "fileName": "pricing20111002.tbz"
+        }]
+    }]
+}
