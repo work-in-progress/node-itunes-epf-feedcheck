@@ -33,6 +33,7 @@ returns a json string. Or call it programmatically like so:
 
 ## Result data format
 You can see the sample JSON output in examples/sampleoutput.json. Here is a quick overview:
+
 	full:
 		files: [ {
 			"fileUrl": "http://username:password@feeds.itunes.apple.com/feeds/epf/v3/full/current/itunes20110928.tbz"
@@ -53,7 +54,7 @@ You can see the sample JSON output in examples/sampleoutput.json. Here is a quic
 			"year": 2011
 		},
 		"files" : *see above*
-	 },...
+	},...
 	]
 
 ## Advertising :)
