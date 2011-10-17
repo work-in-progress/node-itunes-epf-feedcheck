@@ -3,7 +3,7 @@
 The Apple iTunes EPF program exports a daily dump of all the iTunes store content, exposed through their web site. The content is structured in folders that expose weekly changes, with one full dump and incremental updates there after.
 This module connects to the web site (you need to be member of the EPF program) and returns the list of files for the current week. It is intended to be called on a regular basis (every hour or so) to determine if new data is available for download.
 
-[![Build Status](https://secure.travis-ci.org/freshfugu/itunes-epf-feedcheck.png)](http://travis-ci.org/freshfugu/itunes-epf-feedcheck)
+[![Build Status](https://secure.travis-ci.org/freshfugu/node-itunes-epf-feedcheck.png)](http://travis-ci.org/freshfugu/node-itunes-epf-feedcheck)
 
 Please note that travis-ci.org, at this point in time, does not test this correctly because the nock mocking library needs node 0.4.10 but travis runs on 0.4.8
 
@@ -79,7 +79,7 @@ Listened to lots of Nicki Minaj while writing this.
 * npm adduser
 * npm publish
 
-## Contributing to itunes-epf-feedback
+## Contributing to itunes-epf-feedcheck
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
@@ -89,7 +89,7 @@ Listened to lots of Nicki Minaj while writing this.
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the package.json, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-== Copyright
+## Copyright
 
 Copyright (c) 2011 Martin Wawrusch. See LICENSE for
 further details.

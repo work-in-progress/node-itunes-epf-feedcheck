@@ -6,7 +6,7 @@
   "main" : "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/freshfugu/itunes-epf-feedcheck.git"
+    "url": "git://github.com/freshfugu/node-itunes-epf-feedcheck.git"
   },
   "bin" : {
     "itunes-epf-feedcheck" : "./bin/itunes-epf-feedcheck"
@@ -37,10 +37,10 @@
     "vows" : ">= 0.5.9",
     "nock" : "*"
   },
-  "bugs": { "url": "http://github.com/freshfugu/itunes-epf-feedcheck/issues" },
+  "bugs": { "url": "http://github.com/freshfugu/node-itunes-epf-feedcheck/issues" },
     "licenses": [
       { "type": "MIT",
-        "url": "http://github.com/freshfugu/itunes-epf-feedcheck/raw/master/LICENSE"
+        "url": "http://github.com/freshfugu/node-itunes-epf-feedcheck/raw/master/LICENSE"
       }
     ]
     
