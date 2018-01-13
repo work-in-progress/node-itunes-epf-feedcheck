@@ -2,7 +2,7 @@
 # MIT licensed
 #
 
-jsdom = require 'jsdom'
+jsdom = require 'jsdom/lib/old-api'
 _ = require 'underscore'
 constants = require './constants'
 util = require './util'
@@ -13,13 +13,13 @@ fileRegex = /\d{8}\.tbz$/i
 module.exports = class FileCheck
   # Initializes a new instance of the IncrementalFolderCheck class.
   # username: The EPF username you received from Apple
-  # password: The EPF password you received from Apple  
+  # password: The EPF password you received from Apple
   constructor: (@username,@password,@overrideFeedUrl) ->
-  
+
   # Constructs a feed url to access the incremental page
   feedUrl : ->
     return @overrideFeedUrl if @overrideFeedUrl
-    
+
     "http://#{encodeURIComponent(@username)}:#{encodeURIComponent(@password)}@#{constants.appleEpfRoot}"
 
   # Parses the result from the request and extracts the subfolders that resemble a date
@@ -30,22 +30,22 @@ module.exports = class FileCheck
     items = $.find('a')
     items = _.map items, (item) -> $(item).text()
     items = _.select items, (item) -> item.match(fileRegex)
-    
-    items = _.map items, (item) => 
+
+    items = _.map items, (item) =>
         fileUrl : "#{@feedUrl()}#{item}"
         fileName : item
     #_.each items, (item) -> console.log item
-    
+
     items = _.toArray items
     filename = _.first(items).fileName
-    
+
     res =
-      files : items 
+      files : items
       date : util.parseAppleDate filename
 
 
   # Checks the feed.
-  check : (cb) ->    
+  check : (cb) ->
     jsdom.env @feedUrl(), [ constants.jqueryUrl], (e, window) =>
-      return cb(e) if e 
-      cb null, @parseJsDom(window) 
+      return cb(e) if e
+      cb null, @parseJsDom(window)
